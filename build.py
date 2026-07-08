@@ -21,7 +21,7 @@ def build_site():
             html_content = markdown.markdown(body_text)
 
             final_html = template.replace("{{ title }}", title).replace("{{ content }}", html_content)
-            
+
             output_filename = filename.replace(".md", ".html")
             with open(f"docs/posts/{output_filename}", f"w", encoding="utf-8") as f:
                 f.write(final_html)
@@ -44,7 +44,7 @@ def build_index(posts):
     </body>
     </html>
     """
-    with open("docs/index.html", "w", encoding="utf-8") as f:
+    with open("index.html", "w", encoding="utf-8") as f:
         f.write(index_html)
     print("Homepage index updated!")
 
