@@ -14,8 +14,8 @@ def build_site():
             with open(f"posts/{filename}", "r", encoding="utf-8") as f:
                 lines = f.readlines()
 
-            title = lines[0].replace("Title:", "").strip()
-            date = lines[1].replace("Title:", "").strip()
+            title = lines[0].replace("title:", "").strip()
+            date = lines[1].replace("date:", "").strip()
 
             body_text = "".join(lines[2:])
             html_content = markdown.markdown(body_text)
